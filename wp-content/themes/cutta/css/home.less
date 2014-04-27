@@ -1,0 +1,73 @@
+body#home {
+    padding-top: 50px;
+    text-align: center;
+
+    div.menu-nav-container {
+        display: none;
+    }
+
+    a#find-tutor, a#find-translator {
+        display: inline-block;
+        position: relative;
+        color: @white;
+        font: 36px @heading-font;
+        text-align: center;
+        border: 3px @black solid;
+        border-radius: 100%;
+        width: 260px;
+        height: 260px;
+        vertical-align: middle;
+        box-sizing: border-box;
+
+        span {
+            position: absolute;
+            top: 33%; left: 0px;
+            width: 100%;
+        }
+
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 4%; left: 4%;
+            border: 2px @white solid;
+            border-radius: 100%;
+            width: 92%; height: 92%;
+            box-sizing: border-box;
+        }
+    }
+
+    a#find-tutor {
+        background: @blue;
+
+        &:hover {
+            background: darken(@blue, 2%);
+        }
+    }
+
+    a#find-translator {
+        background: @green;
+
+        &:hover {
+            background: darken(@green, 2%);
+        }
+    }
+
+    img#logo {
+        width: 430px;
+        vertical-align: middle;
+    }
+
+    span#slogan {
+        display: block;
+        padding-top: 40px;
+        color: darken(@white, 50%);
+        font: 42px @heading-font;
+        font-style: italic;
+
+        &:before, &:after {
+            content: '"';
+            color: darken(@white, 30%);
+        }
+    }
+}

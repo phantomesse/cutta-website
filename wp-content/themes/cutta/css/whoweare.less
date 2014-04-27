@@ -1,0 +1,37 @@
+body#who-we-are {
+    div.staff, div.tutor { 
+        display: inline-block;
+        padding-right: 20px;
+        vertical-align: top;
+        width: 33%;
+
+        &:last-child {
+            padding-right: 0px;
+        }
+
+        &:nth-child(3n) h2 {
+            color: @green;
+        }
+
+        &:nth-child(3n+1) h2 {
+            color: @salmon;
+        }
+
+        &:nth-child(3n+2) h2 {
+            color: @blue;
+        }
+    }
+
+    div.tutor {
+        h2 {
+            margin-top: 0px;
+        }
+
+        img {
+            float: left;
+            margin-top: 5px;
+            padding-right: 10px;
+            width: 120px;
+        }
+    }
+}
