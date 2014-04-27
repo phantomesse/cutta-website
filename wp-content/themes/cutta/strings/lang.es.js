@@ -110,11 +110,11 @@
 		},
 		"translating_at_cutta": "Traduciendo en CUTTA",
 		"translating_at_cutta_body": "CUTTA est\u00e1 con usted de principio a fin, y nuestro equipo es sorprendentemente r\u00e1pido. Hemos lidiado con plazos muy ajustados y enormes cantidades de transcripciones. Hemos tratado con todo, desde certificados de matrimonio a la traducci\u00f3n de la forma de manuales para los juguetes de alta tecnolog\u00eda. Hemos interpretado reuniones de la conferencia de la ONU y las transacciones entre los abogados y los solicitantes de visado. Sabemos lo que est\u00e1s hablando - y sabemos que usted necesita respuestas, r\u00e1pido. CUTTA es ingenioso, profesional y siempre accesible. Atraemos clientes de todos los or\u00edgenes, y apoyamos a todos los niveles de solicitudes.",
-		"how_can_we_help_you": "\u00bfC\u00f3mo podemos <br \/> ayudarle?",
+		"how_can_we_help_you": "\u00bfC\u00f3mo podemos ayudarle?",
 		"submit_a_request": "Presentar una solicitud"
 	},
 	"tutoring": {
-		"how_can_we_help_you": "\u00bfC\u00f3mo podemos <br \/> ayudarle?",
+		"how_can_we_help_you": "\u00bfC\u00f3mo podemos ayudarle?",
 		"how_does_the_process_work": "\u00bfC\u00f3mo funciona el proceso?",
 		"process": {
 			"step1": {

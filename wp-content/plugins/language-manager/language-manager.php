@@ -5,9 +5,7 @@ Version: 1.0
 Author: Lauren Zou
 */
 
-$default_language_spreadsheet_key = '0Ao1eaDOso45tdG1PNEJ5N2JxdjdJZWVDVVFXMWplbFE';
-
-function update_languages() {
+function update_languages($default_language_spreadsheet_key) {
     $main_directory = get_template_directory().'/';
     $language_spreadsheet_url = 'http://cors.io/spreadsheets.google.com/feeds/list/'.$default_language_spreadsheet_key.'/od6/public/values?alt=json';
 
@@ -147,16 +145,23 @@ function language_manager_options() {
         wp_die(__('You do not have sufficient permissions to access this page.'));
     }
 
+    if('POST' == $_SERVER['REQUEST_METHOD']) {
+        $message = update_languages(htmlspecialchars($_POST['spreadsheet_key']));
+        echo '<div id="setting-error-settings_updated" class="updated settings-error"><p><strong>'.$message.'</strong></p></div>';
+    }
+
+    $default_language_spreadsheet_key = '0Ao1eaDOso45tdG1PNEJ5N2JxdjdJZWVDVVFXMWplbFE';
+
     echo '<div class="wrap">';
     echo '<h2>Language Manager</h2>';
 
-    if('POST' == $_SERVER['REQUEST_METHOD']) {
-        $message = update_languages();
-        echo '<div class="update-nag">' . $message . '</div>';
-    }
-
     echo '<form action="" method="POST">';
-    echo '<input type="text" value="" />';
+
+    echo '<table class="form-table"><tr>';
+    echo '<th scope="row">Google Spreadsheet Key</th>';
+    echo '<td><input name="spreadsheet_key" type="text" value="'.$default_language_spreadsheet_key.'" /></td>';
+    echo '</tr></table>';
+
     echo '<input type="submit" name="submit" id="submit" class="button button-primary" value="Update Languages">';
     echo '</form>';
     echo '</div>';
